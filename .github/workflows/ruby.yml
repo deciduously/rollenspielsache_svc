@@ -10,7 +10,7 @@ jobs:
   runner-job:
       # You must use a Linux environment when using service containers or container jobs
       runs-on: ubuntu-latest
-  
+
       # Service containers to run with `runner-job`
       services:
         # Label used to access the service container
@@ -26,10 +26,6 @@ jobs:
           ports:
             # Maps port 6379 on service container to the host
             - 6379:6379
-  build:
-
-    runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v2
     - name: Set up Ruby 2.7
