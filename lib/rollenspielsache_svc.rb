@@ -6,9 +6,9 @@ require 'librollenspielsache'
 
 # Service coordination for Rollenspielesache applications
 module RollenspielsacheSvc
-  include Librollenspielsache
   class Error < StandardError; end
-  # Your code goes here...
+
+  # Produces rolls from strings
   class StringRoller
     attr_reader :input
     def initialize(input)
@@ -17,8 +17,7 @@ module RollenspielsacheSvc
 
     def result
       puts "Rolling #{input}..."
-      result = Dice::Roll.from_str(input).execute.total
-      puts result
+      Rollenspielsache::Dice::Roll.from_str(input).execute.total
     end
   end
 end
