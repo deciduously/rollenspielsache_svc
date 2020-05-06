@@ -20,6 +20,8 @@ Gem::Specification.new do |spec|
   spec.metadata['changelog_uri'] = 'https://github.com/deciduously/rollenspielsache_svc/blob/master/CHANGELOG.md'
 
   # spec.add_runtime_dependency 'librollenspielsache-rb', '~> 0.1', '>= 0.1.1'
+  spec.add_runtime_dependency 'sinatra'
+  spec.add_runtime_dependency 'thin'
 
   spec.add_development_dependency 'rubocop'
 

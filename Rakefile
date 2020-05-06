@@ -14,4 +14,8 @@ RuboCop::RakeTask.new(:lint) do |task|
   task.fail_on_error = false
 end
 
+task :serve do
+  ruby 'app/serve.rb'
+end
+
 task default: :spec

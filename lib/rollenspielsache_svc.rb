@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'rollenspielsache_svc/version'
+require_relative 'rollenspielsache_svc/version'
 
 require 'librollenspielsache'
 
