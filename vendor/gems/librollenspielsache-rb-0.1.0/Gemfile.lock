@@ -1,11 +1,6 @@
 PATH
   remote: .
   specs:
-    rollenspielsache_svc (0.0.1)
-
-PATH
-  remote: vendor/gems/librollenspielsache-rb-0.1.0
-  specs:
     librollenspielsache-rb (0.1.0)
       dotenv
       ffi
@@ -54,7 +49,6 @@ PLATFORMS
 DEPENDENCIES
   librollenspielsache-rb!
   rake (~> 12.0)
-  rollenspielsache_svc!
   rspec (~> 3.0)
   rubocop
 

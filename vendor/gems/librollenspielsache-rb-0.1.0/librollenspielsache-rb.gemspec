@@ -1,25 +1,26 @@
 # frozen_string_literal: true
 
-require_relative 'lib/rollenspielsache_svc/version'
+require_relative 'lib/librollenspielsache/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = 'rollenspielsache_svc'
-  spec.version       = RollenspielsacheSvc::VERSION
+  spec.name          = 'librollenspielsache-rb'
+  spec.version       = Rollenspielsache::VERSION
   spec.authors       = ['Ben Lovy']
   spec.email         = ['ben@deciduously.com']
 
-  spec.summary       = 'Backend service for librollenspielsache-rb'
-  spec.description   = 'Provides a GraphQL server and Redis interface for librollenspiel types.'
-  spec.homepage      = 'https://rubygems.org/gems/rollenspielsache_svc'
+  spec.summary       = 'Ruby binding for librolenspiesache.'
+  spec.description   = "Complete Ruby-idiomatic wrapper for librollenspielsache.  WIP - there's very little to the underlying binding, and as such, very little here.  Version numbers for both should remain in sync, and this won't be \"usable\" until 1.0."
+  spec.homepage      = 'https://rubygems.org/gems/librollenspielsache-rb'
   spec.required_ruby_version = Gem::Requirement.new('>= 2.3.0')
 
   spec.metadata['allowed_push_host'] = 'https://rubygems.org'
 
   spec.metadata['homepage_uri'] = spec.homepage
-  spec.metadata['source_code_uri'] = 'https://github.com/deciduously/rollenspielsache_svc'
-  spec.metadata['changelog_uri'] = 'https://github.com/deciduously/rollenspielsache_svc/blob/master/CHANGELOG.md'
+  spec.metadata['source_code_uri'] = 'https://github.com/deciduously/librollenspielsache-rb'
+  spec.metadata['changelog_uri'] = 'https://github.com/deciduously/librollenspielsache-rb/blob/master/CHANGELOG.md'
 
-  # spec.add_runtime_dependency 'librollenspielsache-rb', '~> 0.1', '>= 0.1.1'
+  spec.add_dependency 'dotenv'
+  spec.add_dependency 'ffi'
 
   spec.add_development_dependency 'rubocop'
 
