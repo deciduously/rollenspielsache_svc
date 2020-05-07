@@ -10,14 +10,15 @@ module RollenspielsacheSvc
 
   # Produces rolls from strings
   class StringRoller
-    attr_reader :input
+    attr_reader :roll
     def initialize(input)
-      @input = input
+      @roll = Rollenspielsache::Dice::Roll.from_str(input)
     end
 
     def result
-      puts "Rolling #{input}..."
-      Rollenspielsache::Dice::Roll.from_str(input).execute.total
+      puts "Rolling #{roll}..."
+      result = roll.execute
+      result.to_json
     end
   end
 end

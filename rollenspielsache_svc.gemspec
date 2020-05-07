@@ -21,6 +21,7 @@ Gem::Specification.new do |spec|
 
   # spec.add_runtime_dependency 'librollenspielsache-rb', '~> 0.1', '>= 0.1.1'
   spec.add_runtime_dependency 'sinatra'
+  spec.add_runtime_dependency 'sinatra-contrib'
   spec.add_runtime_dependency 'thin'
 
   spec.add_development_dependency 'rubocop'

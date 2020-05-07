@@ -9,8 +9,14 @@ get '/' do
   'Congrats, you\'re on Rollenspielsache'
 end
 
+get '/ping' do
+  'pong'
+end
+
 get '/roll/:input' do
   input = params['input']
   roller = RollenspielsacheSvc::StringRoller.new(input)
-  "Rolling #{input}...#{roller.result}"
+  json = roller.result.to_json
+  puts json
+  json
 end

@@ -1,3 +1,4 @@
-# 0.0.1
+# 0.1.0
 
-Implements a GraphQL server and connects to a Redis instance.
+* Ping endpoint
+* Rolls dice.
